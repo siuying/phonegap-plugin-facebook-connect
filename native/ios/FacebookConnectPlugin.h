@@ -9,16 +9,11 @@
 #import <Foundation/Foundation.h>
 #import "FBConnect.h"
 
-#ifdef PHONEGAP_FRAMEWORK
-    #import <PhoneGap/PGPlugin.h>
-    #import <PhoneGap/PluginResult.h>
-#else
-    #import "PGPlugin.h"
-    #import "PluginResult.h"
-#endif
+#import <Cordova/CDVPlugin.h>
+#import <Cordova/CDVPluginResult.h>
 
 
-@interface FacebookConnectPlugin : PGPlugin < FBSessionDelegate, FBRequestDelegate, FBDialogDelegate > {
+@interface FacebookConnectPlugin : CDVPlugin < FBSessionDelegate, FBRequestDelegate, FBDialogDelegate > {
 }
 
 @property (nonatomic, retain) Facebook *facebook;

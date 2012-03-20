@@ -1,4 +1,5 @@
 PG = ( typeof PG == 'undefined' ? {} : PG );
+PhoneGap = ( typeof PG == 'undefined' ?  : Cordova );
 PG.FB = {
   init: function(apiKey, fail) {
     // create the fb-root element if it doesn't exist
